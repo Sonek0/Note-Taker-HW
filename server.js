@@ -62,4 +62,23 @@ app.delete("api/notes/:id", function (req, res){
         writeFileAsync("./develop/db/d.json", JSON.stringify(notes))
         res.send('Saved!')
     })
-})
+});
+
+//HTML path
+app.get("/notes", function (req, res) {
+    res.sendFile(path.join(__dirname, "./develop/public/notes.html"));
+});
+
+app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "./develop/public/index.html"));
+});
+
+get.app("*", function(req, res){
+    res.sendFile(path.join(__dirname, "./develop/public/index.html"))
+});
+
+
+// Listener
+app.listen(PORT, function () {
+    console.log("App is on PORT" + PORT)
+});
