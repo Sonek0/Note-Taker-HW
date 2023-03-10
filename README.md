@@ -4,7 +4,6 @@
 
 Demonstrating how a to do a note taker through apis from the GET and POST with the given code.
 
-Disclaimer (i lost the email for )
 
 
 ## Mock-Up
